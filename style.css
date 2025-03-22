@@ -1,0 +1,338 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #0A0A0D; 
+}
+
+header {
+    background-color: #0A0A0D; 
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container {
+    color: white;
+    padding: 15px;
+    max-width: 5000px;
+    margin: 10px 10px 10px 10px;
+    background: #252526;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.rules {
+    text-align: left;
+}
+
+.toggle-block {
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.toggle-header {
+    background-color: #1B1B1C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-header:hover {
+    background-color: #d01d3e;
+    border-radius: 12px; /* Сильне закруглення */
+}
+
+.toggle-content {
+    display: none;
+    padding: 10px 20px;
+    background-color: #1B1B1C;
+    border-radius: 5px;
+    margin-top: 5px;
+    border-radius: 12px;
+}
+
+.toggle-content.visible {
+    display: block; /* Показуємо контент */
+}
+
+.arrow {
+
+    width: 15px; /* Розмір зображення */
+    height: 15px;
+    margin-left: 8px; /* Відступ від тексту */
+    vertical-align: middle; /* Вирівнювання по центру тексту */
+
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(90deg); /* Обертаємо стрілку при розкритті */
+}
+
+h2 {
+    color: #ffffff; 
+    margin-top: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.additional {
+    color: #cccccc;
+    font-style: italic;
+}
+
+.button-container {
+display: flex;
+flex-direction: column; /* Розташування кнопок вертикально */
+align-items: center; /* Вирівнювання по центру */
+gap: 10px; /* Відступ між кнопками */
+}
+
+@media (min-width: 768px) {
+.button-container {
+    flex-direction: row; /* Горизонтально на ПК */
+    flex-wrap: wrap; /* Дозволяє кнопкам переходити на новий рядок */
+    justify-content: center; /* Вирівнювання по центру */
+}
+
+.button {
+    flex: 1 1 45%; /* Кнопки займають 45% ширини контейнера */
+    max-width: 45%; /* Максимальна ширина кнопки */
+}
+}
+
+.button {
+display: inline-block;
+width: 300px; /* Фіксована ширина кнопок */
+padding: 10px 20px; /* Внутрішні відступи */
+text-align: center;
+text-decoration: none;
+color: white; /* Колір тексту */
+background-color: #1B1B1C; /* Колір фону */
+border-radius: 12px; /* Сильне закруглення */
+font-family: Arial, sans-serif; /* Шрифт */
+font-size: 16px; /* Розмір тексту */
+transition: background-color 0.3s ease; /* Плавна зміна кольору */
+}
+
+.button:hover {
+background-color: #d01d3e; /* Колір фону при наведенні */
+}
+
+.button:active {
+    background-color: #a0142b; /* Колір фону при натисканні */
+  }
+
+.custom-list p::before {
+content: "•"; /* Точка */
+margin-right: 15px; /* Збільшений відступ між точкою та текстом */
+color: rgb(255, 255, 255);
+}
+
+.custom-list p {
+margin-bottom: 10px; /* Відступ між пунктами */
+line-height: 1.5; /* Збільшений відступ між рядками */
+}
+
+.dark-list {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.dark-list li {
+    display: flex; /* Вирівнюємо елементи списку в одну лінію */
+}
+
+.dark-list li::before {
+    content: "⚫"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 5px; /* Додає відступ між емодзі та текстом */
+    flex-shrink: 0; /* Запобігає стисненню емодзі */
+}
+
+.red-list {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.red-list li {
+    display: flex; /* Вирівнюємо елементи списку в одну лінію */
+}
+
+.red-list li::before {
+    content: "🔴"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 5px; /* Додає відступ між емодзі та текстом */
+}
+
+.white-list {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.white-list li {
+    display: flex; /* Вирівнюємо елементи списку в одну лінію */
+}
+
+.white-list li::before {
+    content: "⚪"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 5px; /* Додає відступ між емодзі та текстом */
+}
+
+.bm-list {
+    padding-left: 2;
+    margin-left: 0;
+    list-style: none;
+}
+
+.vl-list {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.vl-list ul {
+    display: flex;
+    margin-bottom: 10px
+}
+
+.vl-list ul::before {
+    content: "•"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 15px; /* Додає відступ між емодзі та текстом */
+}
+
+.vl-list li {
+    display: flex; /* Вирівнюємо елементи списку в одну лінію */
+}
+
+.vl-list li::before {
+    content: "🔪"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 15px; /* Додає відступ між емодзі та текстом */
+}
+
+.sv-list {
+    padding-left: 0;
+    margin-left: 00;
+    list-style: none;
+}
+
+.sv-list li {
+    display: flex; /* Вирівнюємо елементи списку в одну лінію */
+}
+
+.sv-list li::before {
+    content: "💣"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 15px; /* Додає відступ між емодзі та текстом */
+}
+
+.st-list {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.st-list ul {
+    display: flex;
+    margin-bottom: 10px
+}
+
+.st-list ul::before {
+    content: "•"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 15px; /* Додає відступ між емодзі та текстом */
+}
+
+.st-list li {
+    display: flex; /* Вирівнюємо елементи списку в одну лінію */
+}
+
+.st-list li::before {
+    content: "🏴"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 15px; /* Додає відступ між емодзі та текстом */
+}
+
+.ad-list {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.ad-list li {
+    display: flex; /* Вирівнюємо елементи списку в одну лінію */
+}
+
+.ad-list li::before {
+    content: "🦊"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 15px; /* Додає відступ між емодзі та текстом */
+}
+
+.ad-list ul {
+    display: flex;
+    margin-bottom: 10px
+}
+
+.ad-list ul::before {
+    content: "•"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 15px; /* Додає відступ між емодзі та текстом */
+}
+
+.in-list {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.in-list li {
+    display: flex; /* Вирівнюємо елементи списку в одну лінію */
+    margin-bottom: 10px
+}
+
+.in-list li::before {
+    content: "🐈‍⬛"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 15px; /* Додає відступ між емодзі та текстом */
+}
+
+.in-list ul {
+    display: flex;
+}
+
+.in-list ul::before {
+    content: "•"; /* Тут можна поставити будь-яке емодзі */
+    margin-right: 15px; /* Додає відступ між емодзі та текстом */
+}
+
+.down {
+    font-size: 10px;
+    opacity: 0.33;
+}
+
+.hidden-button {
+    font-size: 10px;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.text-to-show {
+    display: none;
+    font-size: 16px;
+    color: #d01d3e;
+    margin-top: 10px;
+}
+
+
+
+
+
