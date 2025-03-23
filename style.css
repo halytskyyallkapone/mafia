@@ -123,16 +123,11 @@ gap: 10px; /* Відступ між кнопками */
     border-radius: 12px; /* Сильне закруглення */
     font-family: Arial, sans-serif; /* Шрифт */
     font-size: 16px; /* Розмір тексту */
-    transition: background-color 0.3s ease; /* Плавна зміна кольору */
+    transition: none; /* Плавна зміна кольору */
 }
 
 .button:hover {
     background-color: #d01d3e; /* Колір фону при наведенні */
-}
-
-.button:active {
-    background-color: #a0142b; /* Колір фону при натисканні */
-    transition: none;
 }
 
 .custom-list p::before {
