@@ -333,6 +333,14 @@ line-height: 1.5; /* Збільшений відступ між рядками *
     margin-top: 10px;
 }
 
+.open .toggle-content {
+    display: block; /* Відкривається при додаванні класу */
+}
+.open .arrow {
+    transform: rotate(90deg); /* Повертаємо стрілку вниз */
+}
+
+
 
 
 
