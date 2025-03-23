@@ -131,8 +131,9 @@ background-color: #d01d3e; /* Колір фону при наведенні */
 }
 
 .button:active {
-    background-color: #a0142b; /* Колір фону при натисканні */
-  }
+background-color: #a0142b; /* Колір фону при натисканні */
+transition: none;
+}
 
 .custom-list p::before {
 content: "•"; /* Точка */
