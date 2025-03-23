@@ -7,17 +7,19 @@ content.classList.toggle('visible');
 arrow.classList.toggle('rotate');
 }
 
-document.addEventListener('copy', function(e) {
-    e.preventDefault();  // Забороняє копіювання
-});
+function toggleContent(header) {
+    let block = header.parentElement;
+    block.classList.toggle("open");
+}
 
-let clickCount = 0;
-const button = document.getElementById('hiddenButton');
-const text = document.getElementById('showText');
+// Автоматично відкриваємо потрібний блок, якщо в URL є його ID
+window.onload = function () {
+    let hash = window.location.hash; // Отримуємо #id з URL
 
-button.addEventListener('click', function() {
-    clickCount++;
-    if (clickCount === 3) {
-        text.style.display = 'block';  // Показуємо текст після трьох натискань
+    if (hash) {
+        let block = document.querySelector(hash + " .toggle-block"); // Шукаємо відповідний елемент
+        if (block) {
+            block.classList.add("open");
+        }
     }
-});
+};
