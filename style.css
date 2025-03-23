@@ -113,26 +113,26 @@ gap: 10px; /* Відступ між кнопками */
 }
 
 .button {
-display: inline-block;
-width: 300px; /* Фіксована ширина кнопок */
-padding: 10px 20px; /* Внутрішні відступи */
-text-align: center;
-text-decoration: none;
-color: white; /* Колір тексту */
-background-color: #1B1B1C; /* Колір фону */
-border-radius: 12px; /* Сильне закруглення */
-font-family: Arial, sans-serif; /* Шрифт */
-font-size: 16px; /* Розмір тексту */
-transition: background-color 0.3s ease; /* Плавна зміна кольору */
+    display: inline-block;
+    width: 300px; /* Фіксована ширина кнопок */
+    padding: 10px 20px; /* Внутрішні відступи */
+    text-align: center;
+    text-decoration: none;
+    color: white; /* Колір тексту */
+    background-color: #1B1B1C; /* Колір фону */
+    border-radius: 12px; /* Сильне закруглення */
+    font-family: Arial, sans-serif; /* Шрифт */
+    font-size: 16px; /* Розмір тексту */
+    transition: background-color 0.3s ease; /* Плавна зміна кольору */
 }
 
 .button:hover {
-background-color: #d01d3e; /* Колір фону при наведенні */
+    background-color: #d01d3e; /* Колір фону при наведенні */
 }
 
 .button:active {
-background-color: #a0142b; /* Колір фону при натисканні */
-transition: none;
+    background-color: #a0142b; /* Колір фону при натисканні */
+    transition: none;
 }
 
 .custom-list p::before {
