@@ -340,6 +340,14 @@ line-height: 1.5; /* Збільшений відступ між рядками *
     transform: rotate(90deg); /* Повертаємо стрілку вниз */
 }
 
+.tooltip {
+    display: block;
+    width: 100%; /* Довжина лінії */
+    height: 2px; /* Товщина лінії */
+    background: white; /* Колір лінії */
+    margin: 10px auto; /* Відступи зверху/знизу + центрування */
+}
+
 
 
 
