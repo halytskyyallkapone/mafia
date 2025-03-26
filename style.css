@@ -355,7 +355,21 @@ line-height: 1.5; /* Збільшений відступ між рядками *
     margin: 0 auto;
 }
 
-
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #d01d3e;
+    border-radius: 100%;
+    opacity: 1;
+    animation: explode 1s forwards;
+}
+@keyframes explode {
+    to {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}
 
 
 
