@@ -23,3 +23,11 @@ window.onload = function () {
         }
     }
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.getElementById('myButton');
+    button.addEventListener('click', function(e) {
+      e.preventDefault(); // запобігає переходу за посиланням
+      this.textContent = '🤡 Забудь, ти раб 🤡';
+    });
+  });
