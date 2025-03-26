@@ -27,7 +27,24 @@ window.onload = function () {
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('myButton');
     button.addEventListener('click', function(e) {
-      e.preventDefault(); // запобігає переходу за посиланням
-      this.textContent = '🤡 Забудь, ти раб 🤡';
+        e.preventDefault();
+        this.textContent = '🤡 Забудь, ти раб 🤡';
+        
+        setTimeout(() => {
+            const rect = button.getBoundingClientRect();
+            for (let i = 0; i < 30; i++) {
+                let particle = document.createElement('div');
+                particle.classList.add('particle');
+                document.body.appendChild(particle);
+                
+                particle.style.left = `${rect.left + rect.width / 2}px`;
+                particle.style.top = `${rect.top + rect.height / 2}px`;
+                particle.style.setProperty('--x', `${(Math.random() - 0.5) * 200}px`);
+                particle.style.setProperty('--y', `${(Math.random() - 0.5) * 200}px`);
+                
+                setTimeout(() => particle.remove(), 1000);
+            }
+            button.style.visibility = 'hidden';
+        }, 1500);
     });
-  });
+});
